@@ -35,6 +35,26 @@
       </div>
     {% endif %}
   {% endif %}
+  {% if categories.active != blank %}
+  <div class="category_list">
+    <ul>
+      <li{% if page.full_url contains '/products' %} class="current"{% endif %}><a href="/products">All</a></li>
+      {% for category in categories.active %}
+        <li{% if page.full_url contains category.url %} class="current"{% endif %}>{{ category | link_to }}</li>
+      {% endfor %}
+    </ul>
+    <div class="select">
+      <select class="category_select">
+        <option value="" selected disabled>Browse products...</option>
+        <option value="/products">View all</option>
+        {% for category in categories.active %}
+          <option value="/category/{{ category.permalink }}">{{ category.name }}</option>
+        {% endfor %}
+      </select>
+      <svg viewBox="0 0 15 7.6" enable-background="new 0 0 15 7.6"><path d="M15 1.1l-7.5 6.5-7.5-6.3 1-1.2 6.5 5.5 6.5-5.6z"/></svg>
+    </div>
+  </div>
+{% endif %}
   <section class="content page-{{ page.permalink }} {{ page.category }}{% if theme.images.welcome_image or theme.welcome_text != blank %} has_welcome{% endif %}">
     {% if page.category == 'custom' %}
       <h1>{{ page.name }}</h1>
