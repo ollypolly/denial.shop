@@ -10,7 +10,9 @@
     {
       "variable": "welcome_image",
       "label": "Welcome image",
-      "description": "Displays a full screen image on the Home page"
+      "description": "Displays a full screen image on the Home page",
+      "default": "https://assets.bigcartel.com/theme_images/54335930/GUS_CLOSE_BLUE_CROSS.jpg?auto=format&fit=max&w=1400",
+      "url": "https://assets.bigcartel.com/theme_images/54335930/GUS_CLOSE_BLUE_CROSS.jpg?auto=format&fit=max&w=1400"
     }
   ],
   "fonts": [
@@ -34,7 +36,7 @@
     {
       "variable": "header_background_color",
       "label": "Header & button background",
-      "default": "#222222"
+      "default": "#00109E"
     },
     {
       "variable": "header_text_color",
@@ -104,7 +106,7 @@
       "variable": "show_search",
       "label": "Show search",
       "type": "boolean",
-      "default": false,
+      "default": true,
       "description": "Displays a product search icon in the header"
     },
     {
@@ -119,7 +121,10 @@
       "variable": "show_overlay",
       "label": "Product list info",
       "type": "select",
-      "options": ["On rollover", "Under image"],
+      "options": [
+        "On rollover",
+        "Under image"
+      ],
       "default": "Under image",
       "description": "Shows a product's name & price on hover, or under the image"
     },
@@ -127,7 +132,18 @@
       "variable": "featured_categories",
       "label": "Featured categories",
       "type": "select",
-      "options": ["0","2","3","4","5","6","7","8","9","10"],
+      "options": [
+        "0",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
       "default": "0",
       "description": "The number of featured categories on the Home page"
     },
@@ -152,8 +168,14 @@
       "label": "Price display",
       "type": "select",
       "options": [
-        ["Currency sign", "sign"],
-        ["Currency code with sign", "sign_and_code"]
+        [
+          "Currency sign",
+          "sign"
+        ],
+        [
+          "Currency code with sign",
+          "sign_and_code"
+        ]
       ],
       "default": "sign",
       "description": "Sets the display of prices in your shop"
