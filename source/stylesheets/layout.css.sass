@@ -214,7 +214,7 @@ ul, ol
 
 button, a.button
   +all-transitions
-  background-color: $header-background-color
+  background-color: #dc3023
   border: none
   color: $header-text-color
   cursor: pointer
@@ -488,25 +488,9 @@ h2.featured_products
   @media screen and (max-width: $break-medium)
     margin-top: 60px
 
-+keyframes(welcome-text)
-  0%
-    opacity: 0
-    +transform(translate3d(0, 10%, 0))
-
-  100%
-    +transform(none)
-    opacity: 1
-
-+keyframes(hide-welcome-text)
-  0%
-    +transform(none)
-    opacity: 1
-
-  100%
-    opacity: 0
-    +transform(translate3d(0, 10%, 0))
-
 .welcome_image
+  // TODO must manually replace in theme.css (uhhh)
+  //{% if theme.images.welcome_image != blank %}url('{{ theme.images.welcome_image.url | constrain: 1400 }}'){% else %}none{% endif %};
   background-image: #{"{% if theme.images.welcome_image != blank %}url(\'{{ theme.images.welcome_image.url | constrain: 1400 }}\'){% else %}none{% endif %}"}
   background-position: 50% 50%
   background-repeat: no-repeat
@@ -535,14 +519,9 @@ h2.featured_products
     width: 100%
 
   .welcome_text
-    +transform(translateY(-50%))
     position: relative
     top: calc(50% - 45px)
-    +animation(welcome-text ease-in 900ms forwards)
     padding: 0 20px
-
-    &.fade_out
-      +animation(hide-welcome-text ease-in 200ms forwards)
 
     h1
       font-size: 60px

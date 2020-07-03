@@ -11,8 +11,8 @@
       "variable": "welcome_image",
       "label": "Welcome image",
       "description": "Displays a full screen image on the Home page",
-      "default": "https://assets.bigcartel.com/theme_images/54335930/GUS_CLOSE_BLUE_CROSS.jpg?auto=format&fit=max&w=1400",
-      "url": "https://assets.bigcartel.com/theme_images/54335930/GUS_CLOSE_BLUE_CROSS.jpg?auto=format&fit=max&w=1400"
+      "default": "yolo",
+      "url": "yolo"
     }
   ],
   "fonts": [
