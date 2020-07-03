@@ -13,6 +13,10 @@
 <body id="{{ page.permalink }}"
   class="{{ page.category }}{% if page.permalink == 'home' %}{% if theme.images.welcome_image or theme.welcome_text != blank %} has_welcome{% endif %}{% endif %}">
   <header class="header">
+    <ul class="header_icons">
+      <li class="open_menu"><a href="#" title="Menu"><span></span><span></span><span></span><span></span></a></li>
+    </ul>
+    {% if page.permalink != 'home' %}
     <div class="store_name {% if theme.header_logo != blank %}image{% else %}text{% endif %}">
       <a href="/" title="{{ store.name | escape }}">
         {% if theme.header_logo != blank %}
@@ -22,6 +26,7 @@
         {% endif %}
       </a>
     </div>
+    {% endif %}
     <ul class="header_icons">
       {% if theme.show_search %}<li class="open_search"><a href="#"><svg viewBox="0 0 30 30">
             <path
@@ -32,7 +37,7 @@
               d="M22.7 8c-.9-3.4-4-6-7.7-6S8.2 4.6 7.3 8H2l3 20h20l3-20h-5.3zM15 4c2.6 0 4.8 1.7 5.6 4H9.3c.9-2.3 3.1-4 5.7-4zm8.3 22H6.7L4.3 10H7v3h2v-3h12v3h2v-3h2.7l-2.4 16z" />
           </svg><span class="cart_count"><span class="cart_value" {% if cart.item_count == 0 %} style="display:none;"
               {% endif %}>{{ cart.item_count }}</span></span></a></li>
-      <li class="open_menu"><a href="#" title="Menu"><span></span><span></span><span></span><span></span></a></li>
+      
     </ul>
   </header>
   {% if page.permalink == 'home' %}
@@ -41,6 +46,15 @@
     <div class="welcome_overlay"></div>
     <div class="welcome_text">
       {% if theme.welcome_text != blank %}<h1>{{ theme.welcome_text }}</h1>{% endif %}
+      <div class="store_name {% if theme.header_logo != blank %}image{% else %}text{% endif %}">
+        <a href="/" title="{{ store.name | escape }}">
+          {% if theme.header_logo != blank %}
+          <img src="{{ theme.header_logo.url | constrain: '800', '120' }}" alt="{{ store.name }}">
+          {% else %}
+          {{ store.name }}
+          {% endif %}
+        </a>
+      </div>
       <a href="/products" class="welcome_button">Shop now</a>
     </div>
   </div>
