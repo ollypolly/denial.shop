@@ -83,6 +83,7 @@ header
   z-index: 3
 
   @media screen and (max-width: $break-small)
+    padding: 0 0.3rem
 
   &.p-absolute 
     position: absolute
@@ -110,7 +111,6 @@ header
         +vertical-align
 
     &.image
-      +vertical-align
 
       a
         height: 50px
@@ -220,13 +220,13 @@ button, a.button
   cursor: pointer
   display: inline-block
   font-size: 18px
-  height: 60px
-  line-height: 60px
+  min-height: 60px
+  line-height: 25px
   max-width: 300px
   outline: none
-  padding: 0
+  padding: 0 1rem
+  max-width: 250px
   text-align: center
-  width: 100%
   text-transform: uppercase
 
   &.minimal-button
