@@ -16,7 +16,7 @@
     <ul class="header_icons">
       <li class="open_menu"><a href="#" title="Menu"><span></span><span></span><span></span><span></span></a></li>
     </ul>
-    {% if page.permalink != home %}
+    {% if page.permalink != 'home' %}
     <div class="store_name {% if theme.header_logo != blank %}image{% else %}text{% endif %}">
       <a href="/" title="{{ store.name | escape }}">
         {% if theme.header_logo != blank %}

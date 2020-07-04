@@ -74,7 +74,7 @@ header
   align-items: center
   background: $header-background-color
   font-family: $primary-font
-  height: 90px
+  height: 70px
   left: 0
   margin: 0
   padding: 0 1rem
@@ -214,7 +214,7 @@ ul, ol
 
 button, a.button
   +all-transitions
-  background-color: #dc3023
+  background-color: #000000
   border: none
   color: $header-text-color
   cursor: pointer
@@ -227,6 +227,7 @@ button, a.button
   padding: 0
   text-align: center
   width: 100%
+  text-transform: uppercase
 
   &.minimal-button
     background: none
@@ -246,7 +247,7 @@ button, a.button
 
   &:not(:disabled):hover, &:not(:disabled):active, &:not(:disabled):focus
     border: none
-    opacity: .6
+    filter: brightness(0.8)
 
 
 .errors
@@ -539,9 +540,6 @@ h2.featured_products
 
       button
         margin: 1rem
-
-      &:hover
-        opacity: .6
 
 section.content
   margin: 0 auto 360px auto
