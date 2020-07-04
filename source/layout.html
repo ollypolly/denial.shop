@@ -12,11 +12,11 @@
 
 <body id="{{ page.permalink }}"
   class="{{ page.category }}{% if page.permalink == 'home' %}{% if theme.images.welcome_image or theme.welcome_text != blank %} has_welcome{% endif %}{% endif %}">
-  <header class="header">
+  <header class="header {% if page.permalink == 'home' %}p-absolute{% endif %}">
     <ul class="header_icons">
       <li class="open_menu"><a href="#" title="Menu"><span></span><span></span><span></span><span></span></a></li>
     </ul>
-    {% if page.permalink != 'home' %}
+    {% if page.permalink != home %}
     <div class="store_name {% if theme.header_logo != blank %}image{% else %}text{% endif %}">
       <a href="/" title="{{ store.name | escape }}">
         {% if theme.header_logo != blank %}

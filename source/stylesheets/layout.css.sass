@@ -16,7 +16,6 @@ body
   font-size: 14px
   line-height: 1
   overflow-y: scroll
-  padding-top: 90px
   font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif
   text-transform: uppercase
 
@@ -79,12 +78,13 @@ header
   left: 0
   margin: 0
   padding: 0 1rem
-  position: fixed
   right: 0
   top: 0
   z-index: 3
 
   @media screen and (max-width: $break-small)
+
+  &.p-absolute 
     position: absolute
 
   &.background_overlay
@@ -355,9 +355,9 @@ button, a.button
     fill: $header-text-color
     height: 18px
     position: absolute
-    right: 42px
+    left: 36px
     top: 37px
-    width: 18px
+    width: 20px
     z-index: 6
 
     @media screen and (max-width: $break-small)
