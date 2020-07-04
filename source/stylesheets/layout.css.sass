@@ -111,6 +111,7 @@ header
         +vertical-align
 
     &.image
+      width: 100%
 
       a
         height: 50px
@@ -224,7 +225,7 @@ button, a.button
   line-height: 25px
   max-width: 300px
   outline: none
-  padding: 0 1rem
+  padding: 1rem
   max-width: 250px
   text-align: center
   text-transform: uppercase
@@ -329,7 +330,7 @@ button, a.button
   top: 0
   visibility: hidden
   width: 100%
-  z-index: 1000
+  z-index: 5
 
   &.open
     +transition(opacity 0.4s)
@@ -746,7 +747,7 @@ footer.footer
   position: fixed
   margin: 0
   max-width: 380px
-  right: 40px
+  right: 25px
   top: 90px
   width: 380px
   z-index: 4
@@ -760,12 +761,11 @@ footer.footer
     border-width: 2px 15px 14px 15px
     border-color: transparent transparent $background-color transparent
     position: absolute
-    right: 57px
+    right: 9px
     top: -12px
     width: 0
 
     @media screen and (max-width: $break-medium)
-      right: 37px
 
   .cart_holder
 
