@@ -340,7 +340,7 @@ button, a.button
     background: $header-background-color
     bottom: 0
     left: 0
-    opacity: .95
+    opacity: .7
     position: absolute
     right: 0
     top: 0
@@ -356,13 +356,14 @@ button, a.button
     fill: $header-text-color
     height: 18px
     position: absolute
-    left: 36px
-    top: 37px
+    left: 45px
+    top: 45px
     width: 20px
     z-index: 6
 
     @media screen and (max-width: $break-small)
       right: 22px
+
 
   .page_list
     display: none
@@ -404,8 +405,8 @@ button, a.button
       input
         +appearance(none)
         background: none
-        border: none
-        font-size: 1.5em
+        border: 3mm ridge #2b2b2b
+        font-size: 4.5em
         color: $header-text-color
         display: block
         margin: 0 auto
@@ -414,9 +415,10 @@ button, a.button
 
         @media screen and (max-width: $break-small)
           width: 80%
+          font-size: 1.5em
 
         &:focus
-          border: none
+          border: 3mm ridge #DC3023
           color: $header-text-color
           outline: none
 
