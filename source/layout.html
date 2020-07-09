@@ -95,6 +95,13 @@
     {% endif %}
   </section>
   <footer class="footer">
+      <button class="back-to-top-button" onclick="topFunction()" title="Go to top">Back to top</button>
+      <script>
+        function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+      </script>
     {% if theme.twitter_url != blank or theme.facebook_url != blank or theme.instagram_url != blank or theme.tumblr_url != blank or theme.pinterest_url != blank %}
     <ul class="footer_icons">
       {% if theme.instagram_url != blank %}

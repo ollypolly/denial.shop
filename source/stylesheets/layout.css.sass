@@ -213,6 +213,26 @@ ul, ol
   margin: 0
   padding: 0
 
+.back-to-top-button
+  display: none
+  background-color: #000000
+  border: none
+  color: $header-text-color
+  cursor: pointer
+  font-size: 18px
+  min-height: 60px
+  line-height: 25px
+  max-width: 300px
+  outline: none
+  padding: 1rem
+  max-width: 250px
+  text-align: center
+  text-transform: uppercase
+  align-items: center
+  
+  @media screen and (max-width: $break-small)
+    display: inline-block
+
 button, a.button
   +all-transitions
   background-color: #000000
@@ -655,7 +675,7 @@ footer.footer
   font-family: $secondary-font
   bottom: 0
   min-height: 120px
-  padding: 60px 20px
+  padding: 30px 20px
   position: absolute
   text-align: center
   width: 100%
