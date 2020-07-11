@@ -40,6 +40,7 @@ body
       font-size: 22px
       line-height: 1.6em
 
+
     .maintenance_icons
       display: block
 
@@ -298,7 +299,7 @@ button, a.button
     +appearance(none)
     background: none
     border: 0
-    color: $secondary-text-color
+    color: #fff
     font-family: $secondary-font
     font-size: 14px
     height: 100%
@@ -333,9 +334,6 @@ button, a.button
   &:hover
     color: $secondary-text-color
     border-color: $secondary-text-color
-
-    select
-      color: $primary-text-color
 
     svg
       fill: $primary-text-color
@@ -491,8 +489,9 @@ h1, h2, h3, h4, h5, h6
   padding: 0
 
 h1
-  font-size: 36px
+  font-size: 40px
   margin-bottom: 60px
+  text-shadow: 2px -4px 3px rgba(0, 17, 158, 0.7)
 
   @media screen and (max-width: $break-small)
     font-size: 24px
