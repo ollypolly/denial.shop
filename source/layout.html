@@ -240,12 +240,31 @@
     };
   </script>
   <script src="{{ theme | theme_js_url }}"></script>
+  <script>
+    $('.overlay').click(function() {
+      $('.overlay').removeClass('open search');
+      $('.close_overlay').removeClass('d-none');
+    });
+
+    $('#search').click(function(event){
+        event.stopPropagation();
+    });
+
+    $('.open_search a').click(function(e) {
+      $('body').addClass('overlay_open');
+      $('.overlay').addClass('search');
+      $('#search').focus();
+      $('.close_overlay').addClass('d-none');
+    return false;
+  });
+</script>
   {% if page.full_url contains '/product/' %}
   <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
   <script>
     var show_sold_out_product_options = '{{ theme.show_sold_out_product_options }}';
     Product.find('{{ product.permalink }}', processProduct)
   </script>
+
   {% endif %}
 </body>
 

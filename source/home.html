@@ -27,7 +27,7 @@
 {% if theme.featured_products > 0 %}
   {% paginate products from products.current by theme.featured_products %}
     {% if products != blank %}
-      <h2 class="featured_products">Featured Products</h2>
+      <h1 class="featured_products">Featured Products</h1>
       <ul class="product_list {% if paginate.page_size < 4 %}justify_center{% endif %}">
         {% for product in products %}
           <li class="{{ product.css_class }}{% if theme.show_overlay == 'On rollover' %} show_overlay{% endif %}">

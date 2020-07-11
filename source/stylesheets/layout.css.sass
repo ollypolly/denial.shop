@@ -259,6 +259,9 @@ button, a.button
   text-align: center
   text-transform: uppercase
 
+  @media screen and (max-width: $break-small)
+    width: 100%
+
   &.minimal-button
     background: none
     color: $header-background-color
@@ -428,6 +431,9 @@ button, a.button
     .search_form
       display: block
       position: relative
+      padding: 0 2rem
+      display: flex
+      justify-content: center
 
       input
         +appearance(none)
@@ -436,18 +442,21 @@ button, a.button
         font-size: 4.5em
         color: $header-text-color
         display: block
-        margin: 0 auto
-        padding: 15px
-        width: 60%
-
-        @media screen and (max-width: $break-small)
-          width: 80%
-          font-size: 1.5em
+        width: 100%
+        max-width: 700px
+        padding: 0.5rem
 
         &:focus
           border: 3mm ridge #DC3023
           color: $header-text-color
           outline: none
+
+        @media screen and (max-width: $break-small)
+          font-size: 1.5em
+          border: 1mm ridge #2b2b2b
+          
+          &:focus
+            border: 1mm ridge #DC3023
 
         &::-moz-placeholder
           color: $header-text-color
@@ -877,3 +886,6 @@ footer.footer
   @media screen and (max-width: $break-small)
     .button
       max-width: 100%
+
+.d-none 
+  display: none
