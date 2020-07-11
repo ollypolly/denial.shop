@@ -242,8 +242,10 @@
   <script src="{{ theme | theme_js_url }}"></script>
   <script>
     $('.overlay').click(function() {
-      $('.overlay').removeClass('open search');
-      $('.close_overlay').removeClass('d-none');
+      if ($('.overlay').hasClass('search')) {
+        $('.overlay').removeClass('open search');
+        $('.close_overlay').removeClass('d-none');
+      }
     });
 
     $('#search').click(function(event){
