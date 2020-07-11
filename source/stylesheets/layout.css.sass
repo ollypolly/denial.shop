@@ -97,6 +97,10 @@ header
     float: left
     font-size: 20px
     max-width: 60%
+    transition: 0.2s filter ease-in-out
+
+    &:hover 
+      filter: brightness(0.8)
 
     @media screen and (max-width: $break-medium)
 
@@ -148,6 +152,10 @@ header
         display: block
         font-size: 14px
         position: relative
+        transition: .2s opacity ease-in-out
+
+        &:hover
+          opacity: 0.8
 
         svg
           fill: $header-text-color
