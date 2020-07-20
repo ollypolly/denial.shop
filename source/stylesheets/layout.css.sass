@@ -99,9 +99,6 @@ header
     max-width: 60%
     transition: 0.2s filter ease-in-out
 
-    img
-      max-width: 100%
-
     &:hover 
       filter: brightness(0.8)
 
@@ -111,6 +108,9 @@ header
       color: $header-text-color
       display: block
       line-height: 1.2em
+
+      img
+        max-width: 100%
 
     &.text
       height: 50px
@@ -312,7 +312,7 @@ button, a.button
     +appearance(none)
     background: none
     border: 0
-    color: #000000
+    color: #ffffff
     font-family: $secondary-font
     font-size: 14px
     height: 100%
@@ -510,8 +510,6 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: 40px
   margin-bottom: 60px
-  text-shadow: 2px -4px 3px rgba(0, 17, 158, 0.7)
-
   @media screen and (max-width: $break-small)
     font-size: 24px
     margin-bottom: 30px
@@ -554,7 +552,7 @@ h2.featured_products
     bottom: 0
     height: 100%
     left: 0
-    opacity: .35
+    opacity: 0
     position: absolute
     right: 0
     top: 0
@@ -564,6 +562,11 @@ h2.featured_products
     position: relative
     top: calc(50% - 45px)
     padding: 0 20px
+
+    .store_name
+      a
+        img
+          max-width: 100%
 
     h1
       font-size: 60px
@@ -691,6 +694,9 @@ section.content
   h1
     text-align: center
 
+
+
+
 footer.footer
   +pie-clearfix
   background: $footer-background-color
@@ -714,11 +720,30 @@ footer.footer
       display: inline-block
       font-size: 0
       margin: 0 10px
+      color: black
+      font-size: 12px
+      fill: black
+      height: 30px
+      font-size: 1.6rem
+      width: 30px
+    
+      &:hover
+        opacity: .6
 
       a
-        color: $footer-text-color
+        color: black
         display: block
         font-size: 12px
+        fill: black
+        height: 30px
+        font-size: 1.6rem
+        width: 30px
+
+        i
+          fill: black
+          height: 30px
+          font-size: 1.6rem
+          width: 30px
 
         svg
           +all-transitions
