@@ -149,10 +149,10 @@ $(function() {
         var screenWidth = Waypoint.viewportWidth();
         if ($('.welcome_image').length && screenWidth > 765) {
           if (direction === 'down') {
-            $('header').addClass('background_overlay');
+            //$('header').addClass('background_overlay');
           }
           else {
-            $('header').removeClass('background_overlay');
+            //$('header').removeClass('background_overlay');
           }
         }
       },

@@ -3,7 +3,7 @@
 .mini-cart
   position: absolute
   top: 0
-  right: 50px
+  right: 25px
   display: block
 
 #cart .cart_holder
@@ -97,6 +97,8 @@
     .qty_holder
       +pie-clearfix
       margin-top: 20px
+      display: flex
+      align-items: center
 
       button
         +border-radius(3ex)
@@ -108,6 +110,7 @@
         height: 40px
         line-height: normal
         width: 40px
+        padding: 0 7px
 
         @media screen and (max-width: $break-small)
           height: 36px
